@@ -6,12 +6,12 @@ import Heading from "../layout/Heading";
 
 const About = () => {
   return (
-    <div className="md:min-h-screen flex flex-col-reverse md:flex-row items-center gap-5 md:mx-32 mx-5 mt-14">
+    <div className="md:min-h-screen flex flex-col-reverse md:flex-row items-center gap-5 md:mx-32 mx-5 mt-0">
       <div className="w-full md:w-2/4">
         <img src={img} alt="" />
       </div>
       <div className="w-full md:w-2/4 text-center space-y-2">
-        <Heading title1= "About" title2= "Us?" />
+        <Heading title1="About" title2="Us?" />
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
           quae nobis maiores voluptatum suscipit amet? Modi itaque excepturi

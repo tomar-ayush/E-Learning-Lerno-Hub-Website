@@ -18,7 +18,7 @@ import About from "./components/About.jsx";
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Layout />}>
-      <Route path="home" element={<Home />} />
+      <Route path="" element={<Home />} />
       <Route path="about" element={<About />} />
       <Route path="courses" element={<Courses />} />
       <Route path="reviews" element={<Reviews />} />

@@ -19,11 +19,15 @@ const Navbar = () => {
         </div>
         <nav className="hidden md:flex gap-5 font-medium p-1 cursor-pointer">
           <NavLink
-            to="/home"
+            to=""
             spy={true}
             smooth={true}
             duration={500}
-            className="hover:text-green-500  transition-all"
+            className={({ isActive }) =>
+              `hover:text-green-500  transition-all ${
+                isActive ? "text-green-500" : ""
+              }`
+            }
           >
             Home
           </NavLink>
@@ -32,7 +36,11 @@ const Navbar = () => {
             spy={true}
             smooth={true}
             duration={500}
-            className="hover:text-green-500  transition-all"
+            className={({ isActive }) =>
+              `hover:text-green-500  transition-all ${
+                isActive ? "text-green-500" : ""
+              }`
+            }
           >
             About
           </NavLink>
@@ -41,7 +49,11 @@ const Navbar = () => {
             spy={true}
             smooth={true}
             duration={500}
-            className="hover:text-green-500  transition-all"
+            className={({ isActive }) =>
+              `hover:text-green-500  transition-all ${
+                isActive ? "text-green-500" : ""
+              }`
+            }
           >
             Courses
           </NavLink>
@@ -50,7 +62,11 @@ const Navbar = () => {
             spy={true}
             smooth={true}
             duration={500}
-            className="hover:text-green-500  transition-all"
+            className={({ isActive }) =>
+              `hover:text-green-500  transition-all ${
+                isActive ? "text-green-500" : ""
+              }`
+            }
           >
             Reviews
           </NavLink>
@@ -59,67 +75,15 @@ const Navbar = () => {
             spy={true}
             smooth={true}
             duration={500}
-            className="hover:text-green-500  transition-all"
+            className={({ isActive }) =>
+              `hover:text-green-500  transition-all ${
+                isActive ? "text-green-500" : ""
+              }`
+            }
           >
             Contact
           </NavLink>
         </nav>
-        <div className="flex md:hidden" onClick={handleChange}>
-          <div className="p-2">
-            <IoMdMenu size={22} />
-          </div>
-        </div>
-      </div>
-      <div
-        className={`${
-          menu ? "translate-x-0" : "-translate-x-full"
-        } md:hidden flex flex-col absolute bg-white left-0 top-20 font-medium text-2xl text-center pt-8 pb-4 gap-8 w-full h-fit transition-transform duration-300`}
-      >
-        <NavLink
-          to=""
-          spy={true}
-          smooth={true}
-          duration={500}
-          className="hover:text-green-500  marker:transition-all"
-        >
-          Home
-        </NavLink>
-        <NavLink
-          to="about"
-          spy={true}
-          smooth={true}
-          duration={500}
-          className="hover:text-green-500  transition-all"
-        >
-          About
-        </NavLink>
-        <NavLink
-          to="courses"
-          spy={true}
-          smooth={true}
-          duration={500}
-          className="hover:text-green-500  transition-all"
-        >
-          Courses
-        </NavLink>
-        <NavLink
-          to="Reviews"
-          spy={true}
-          smooth={true}
-          duration={500}
-          className="hover:text-green-500  transition-all"
-        >
-          reviews
-        </NavLink>
-        <NavLink
-          to="contact"
-          spy={true}
-          smooth={true}
-          duration={500}
-          className="hover:text-green-500  transition-all"
-        >
-          Contact
-        </NavLink>
       </div>
     </div>
   );
