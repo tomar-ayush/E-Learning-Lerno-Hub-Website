@@ -8,6 +8,9 @@ import {
   Route,
   createRoutesFromElements,
 } from "react-router-dom";
+
+import { KindeProvider } from "@kinde-oss/kinde-auth-react";
+
 import Layout from "./Layout.jsx";
 import Home from "./components/Home.jsx";
 import Courses from "./components/Courses.jsx";
@@ -29,6 +32,13 @@ const router = createBrowserRouter(
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <KindeProvider
+      clientId="99ca6ba3418b4d05bd7188455ab85b44"
+      domain="https://lernohub.kinde.com"
+      redirectUri="http://localhost:5173"
+      logoutUri="http://localhost:5173"
+    >
+      <RouterProvider router={router} />
+    </KindeProvider>
   </React.StrictMode>
 );

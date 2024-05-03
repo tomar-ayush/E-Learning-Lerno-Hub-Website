@@ -1,13 +1,11 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
-import { IoMdMenu } from "react-icons/io";
+import { NavLink, Link } from "react-router-dom";
+import { useKindeAuth } from "@kinde-oss/kinde-auth-react";
+
+import img1 from "../assets/images/avatar.jpeg";
 
 const Navbar = () => {
-  const [menu, setMenu] = useState(false);
-
-  const handleChange = () => {
-    setMenu(!menu);
-  };
+  const { login, register, isAuthenticated, logout, user } = useKindeAuth();
 
   return (
     <div>
@@ -84,6 +82,41 @@ const Navbar = () => {
             Contact
           </NavLink>
         </nav>
+
+        {!isAuthenticated ? (
+          <div className="flex gap-6 ">
+            <button
+              onClick={() => register()}
+              type="button"
+              className="border rounded-xl px-4 py-2 hover:bg-green-200"
+            >
+              Register
+            </button>
+            <button
+              onClick={() => login()}
+              type="button"
+              className="border rounded-xl px-4 py-2 hover:bg-green-200"
+            >
+              Log In
+            </button>
+          </div>
+        ) : (
+          <div className="flex items-center gap-6">
+            <Link to="/courses">
+              <div className="flex items-center">
+                <img src={img1} width={70} />
+                <p>{user.given_name} </p>
+              </div>
+            </Link>
+            <button
+              onClick={() => logout()}
+              type="logout"
+              className="border rounded-xl px-4 py-2 hover:bg-green-200"
+            >
+              Log Out
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );
