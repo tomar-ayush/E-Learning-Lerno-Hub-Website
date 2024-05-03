@@ -1,6 +1,6 @@
 import React from "react";
 import img from "../assets/about.svg";
-import { Link } from "react-scroll";
+import { Link } from "react-router-dom";
 import Button from "../layout/Button";
 import Heading from "../layout/Heading";
 
@@ -18,7 +18,7 @@ const About = () => {
           labore consequuntur, eligendi adipisci reiciendis beatae, ullam, quasi
           voluptate aspernatur iusto ducimus!
         </p>
-        <Link to="contact" spy={true} smooth={true} duration={500}>
+        <Link to="/contact" spy={true} smooth={true} duration={500}>
           <Button title="Contact us" />
         </Link>
       </div>

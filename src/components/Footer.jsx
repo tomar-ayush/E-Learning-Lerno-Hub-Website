@@ -1,61 +1,81 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Footer = () => {
   return (
     <div>
       <div className="flex flex-col md:flex-row justify-between p-5 md:px-32 border border-lightText rounded-lg bg-white">
         <div className="flex flex-col md:flex-row gap-5 font-medium p-5 test-lg">
-          <Link
+          <NavLink
             to=""
             spy={true}
             smooth={true}
             duration={500}
-            className="hover:text-green-500  transition-all"
+            className={({ isActive }) =>
+              `hover:text-green-500  transition-all ${
+                isActive ? "text-green-500" : ""
+              }`
+            }
           >
             Home
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
             to="about"
             spy={true}
             smooth={true}
             duration={500}
-            className="hover:text-green-500  transition-all"
+            className={({ isActive }) =>
+              `hover:text-green-500  transition-all ${
+                isActive ? "text-green-500" : ""
+              }`
+            }
           >
             About
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
             to="courses"
             spy={true}
             smooth={true}
             duration={500}
-            className="hover:text-green-500  transition-all"
+            className={({ isActive }) =>
+              `hover:text-green-500  transition-all ${
+                isActive ? "text-green-500" : ""
+              }`
+            }
           >
             Courses
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
             to="Reviews"
             spy={true}
             smooth={true}
             duration={500}
-            className="hover:text-green-500  transition-all"
+            className={({ isActive }) =>
+              `hover:text-green-500  transition-all ${
+                isActive ? "text-green-500" : ""
+              }`
+            }
           >
             reviews
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
             to="contact"
             spy={true}
             smooth={true}
             duration={500}
-            className="hover:text-green-500  transition-all"
+            className={({ isActive }) =>
+              `hover:text-green-500  transition-all ${
+                isActive ? "text-green-500" : ""
+              }`
+            }
           >
             Contact
-          </Link>
+          </NavLink>
         </div>
         <div>
-          <Link to="/" className="font-semibold text-2xl p-5 cursor-pointer">
+          <NavLink to="/" className="font-semibold text-2xl p-5 cursor-pointer">
             eStudy
-          </Link>
+          </NavLink>
         </div>
       </div>
     </div>
