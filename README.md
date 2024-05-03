@@ -12,3 +12,9 @@ Install Kinde for autthenthication
 #
 
     npm i @kinde-oss/kinde-auth-react
+
+Install React Router Dome for Routing the Webpages
+
+#
+
+        npm i react-router-dom
