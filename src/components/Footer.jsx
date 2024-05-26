@@ -74,7 +74,7 @@ const Footer = () => {
         </div>
         <div>
           <NavLink to="/" className="font-semibold text-2xl p-5 cursor-pointer">
-            eStudy
+            Learno-Hub
           </NavLink>
         </div>
       </div>

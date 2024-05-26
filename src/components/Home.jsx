@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Button from "../layout/Button";
 import img from "../assets/hero.svg";
 
-const Home = () => {
+const Home = (props) => {
   return (
     <div className="min-h-[70vh] flex flex-col md:flex-row md:justify-between items-center md:mx-32 mx-5 mt-10 h-screen mt-[-8vh]">
       <div className="md:w-2/4 text-center">

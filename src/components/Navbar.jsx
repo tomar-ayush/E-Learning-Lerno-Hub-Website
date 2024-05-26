@@ -12,7 +12,7 @@ const Navbar = () => {
       <div className="flex flex-row justify-between p-5 md:px-32 bg-white shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
         <div>
           <NavLink to="/" className="font-semibold text-2xl p-1 cursor-pointer">
-            eStudy
+            Learno-Hub
           </NavLink>
         </div>
         <nav className="hidden md:flex gap-5 font-medium p-1 cursor-pointer">
@@ -102,7 +102,7 @@ const Navbar = () => {
           </div>
         ) : (
           <div className="flex items-center gap-6">
-            <Link to="/courses">
+            <Link to="/profile">
               <div className="flex items-center">
                 <img src={img1} width={70} />
                 <p>{user.given_name} </p>
